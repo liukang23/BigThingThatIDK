@@ -36,8 +36,8 @@
             android:layout_height="wrap_content"
             android:contentDescription="@string/head"
             android:src="@drawable/android_hangman_head"
-            android:paddingLeft="108dp"
-            android:paddingTop="23dp"/>
+            android:paddingLeft="52dp"
+            android:paddingTop="57dp"/>
 
         <ImageView
             android:id="@+id/body"
@@ -45,26 +45,8 @@
             android:layout_height="wrap_content"
             android:contentDescription="@string/body"
             android:src="@drawable/android_hangman_body"
-            android:paddingLeft="120dp"
-            android:paddingTop="53dp"/>
-
-        <ImageView
-            android:id="@+id/leftarm"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/leftarm"
-            android:src="@drawable/android_hangman_arm1"
-            android:paddingLeft="100dp"
-            android:paddingTop="60dp"/>
-
-        <ImageView
-            android:id="@+id/rightarm"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/rightarm"
-            android:src="@drawable/android_hangman_arm2"
-            android:paddingLeft="120dp"
-            android:paddingTop="60dp"/>
+            android:paddingLeft="58dp"
+            android:paddingTop="80dp"/>
 
         <ImageView
             android:id="@+id/leftleg"
@@ -72,8 +54,8 @@
             android:layout_height="wrap_content"
             android:contentDescription="@string/leftleg"
             android:src="@drawable/android_hangman_leg1"
-            android:paddingLeft="101dp"
-            android:paddingTop="90dp"/>
+            android:paddingLeft="58dp"
+            android:paddingTop="99dp"/>
 
         <ImageView
             android:id="@+id/rightleg"
@@ -81,9 +63,28 @@
             android:layout_height="wrap_content"
             android:contentDescription="@string/rightleg"
             android:src="@drawable/android_hangman_leg2"
-            android:paddingLeft="121dp"
-            android:paddingTop="90dp"
-             />
+            android:paddingLeft="71dp"
+            android:paddingTop="98dp" />
+
+        <ImageView
+            android:id="@+id/rightarm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/rightarm"
+            android:src="@drawable/android_hangman_arm2"
+            android:paddingLeft="68dp"
+            android:paddingTop="86dp"/>
+
+        <ImageView
+            android:id="@+id/leftarm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/leftarm"
+            android:src="@drawable/android_hangman_arm1"
+            android:paddingLeft="29dp"
+            android:paddingTop="87dp"/>
+
+
     </RelativeLayout>
     
     <LinearLayout

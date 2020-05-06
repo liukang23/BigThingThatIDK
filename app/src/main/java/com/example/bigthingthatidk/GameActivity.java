@@ -16,6 +16,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.NavUtils;
+import androidx.recyclerview.widget.GridLayoutManager;
 
 import android.os.CountDownTimer;
 import android.os.IBinder;
@@ -77,12 +78,10 @@ public class GameActivity extends AppCompatActivity {
         bodyParts = new ImageView[numParts];
         bodyParts[0] = (ImageView)findViewById(R.id.head);
         bodyParts[1] = (ImageView)findViewById(R.id.body);
-        bodyParts[2] = (ImageView)findViewById(R.id.leftarm);
-        bodyParts[3] = (ImageView)findViewById(R.id.rightarm);
-        bodyParts[4] = (ImageView)findViewById(R.id.leftleg);
-        bodyParts[5] = (ImageView)findViewById(R.id.rightleg);
-
-        playGame();
+        bodyParts[2] = (ImageView)findViewById(R.id.leftleg);
+        bodyParts[3] = (ImageView)findViewById(R.id.rightleg);
+        bodyParts[4] = (ImageView)findViewById(R.id.rightarm);
+        bodyParts[5] = (ImageView)findViewById(R.id.leftarm);
 
         letters = (GridView) findViewById(R.id.letters);
 
@@ -109,30 +108,24 @@ public class GameActivity extends AppCompatActivity {
         mHomeWatcher2.startWatch();
 
         getActionBar().setDisplayHomeAsUpEnabled(true);
+
+        playGame();
     }
 
     private void playGame() {
         String newWord = words[random.nextInt(words.length)]; //chon random cau hoi
-        currPart = 0;
-        numChars = currWord.length();
-        numCorr = 0;
-
-        for (int p=0;p<numParts;p++)
-        {
-            bodyParts[p].setVisibility(View.INVISIBLE);
-        }
-
         while (newWord.equals(currWord)) newWord = words[random.nextInt(words.length)]; //ko trung` cau hoi
         currWord = newWord;
-
         charViews = new TextView[currWord.length()];
         wordLayout.removeAllViews();
+
         for (int c=0;c<currWord.length();c++) //cho chu cai vao cac o
         {
             charViews[c] = new TextView(this);
             charViews[c].setText(""+currWord.charAt(c));
 
-            charViews[c].setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+            charViews[c].setLayoutParams(new GridLayoutManager.LayoutParams(GridLayoutManager.LayoutParams.WRAP_CONTENT,
+                    GridLayoutManager.LayoutParams.WRAP_CONTENT));
             charViews[c].setGravity(Gravity.CENTER);
             charViews[c].setTextColor(Color.WHITE);
             charViews[c].setBackgroundResource(R.drawable.letter_bg);
@@ -142,6 +135,15 @@ public class GameActivity extends AppCompatActivity {
 
         letterAdapter = new LetterAdapter(this);
         letters.setAdapter(letterAdapter);
+
+        currPart = 0;
+        numChars = currWord.length();
+        numCorr = 0;
+
+        for (int p=0;p<numParts;p++)
+        {
+            bodyParts[p].setVisibility(View.INVISIBLE);
+        }
     }
 
     public void letterPressed(View view) {
