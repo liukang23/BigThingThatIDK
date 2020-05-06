@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".GameActivity">
+    tools:context=".GameActivity"
+    android:orientation="horizontal">
 
     <TextView
         android:id="@+id/Timer"
@@ -18,4 +19,94 @@
         tools:text="5:00"
         android:textColor="@android:color/holo_red_dark"/>
 
-</RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+        
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/gallow"
+            android:src="@drawable/android_hangman_gallows"/>
+
+        <ImageView
+            android:id="@+id/head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/head"
+            android:src="@drawable/android_hangman_head"
+            android:paddingLeft="108dp"
+            android:paddingTop="23dp"/>
+
+        <ImageView
+            android:id="@+id/body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/body"
+            android:src="@drawable/android_hangman_body"
+            android:paddingLeft="120dp"
+            android:paddingTop="53dp"/>
+
+        <ImageView
+            android:id="@+id/leftarm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/leftarm"
+            android:src="@drawable/android_hangman_arm1"
+            android:paddingLeft="100dp"
+            android:paddingTop="60dp"/>
+
+        <ImageView
+            android:id="@+id/rightarm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/rightarm"
+            android:src="@drawable/android_hangman_arm2"
+            android:paddingLeft="120dp"
+            android:paddingTop="60dp"/>
+
+        <ImageView
+            android:id="@+id/leftleg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/leftleg"
+            android:src="@drawable/android_hangman_leg1"
+            android:paddingLeft="101dp"
+            android:paddingTop="90dp"/>
+
+        <ImageView
+            android:id="@+id/rightleg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/rightleg"
+            android:src="@drawable/android_hangman_leg2"
+            android:paddingLeft="121dp"
+            android:paddingTop="90dp"
+             />
+    </RelativeLayout>
+    
+    <LinearLayout
+        android:id="@+id/words"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp">
+    </LinearLayout>
+    
+    <GridView
+        android:id="@+id/letters"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="5dp"
+        android:background="#FF000000"
+        android:horizontalSpacing="5dp"
+        android:numColumns="10"
+        android:padding="5dp"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="5dp"/>
+
+</LinearLayout>

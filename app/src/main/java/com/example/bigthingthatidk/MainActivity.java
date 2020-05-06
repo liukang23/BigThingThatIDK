@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
                 if (mServ != null) {
                     mServ.pauseMusic();
                 }
+                MainActivity.this.finish();
             }
         });
 

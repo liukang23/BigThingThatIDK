@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="words">
+        <item>ANDROID</item>
+        <item>LAMTUNG</item>
+        <item>SONTUNG</item>
+        <item>KIEMTRA</item>
+        <item>EZVCL</item>
+    </string-array>
+</resources>
