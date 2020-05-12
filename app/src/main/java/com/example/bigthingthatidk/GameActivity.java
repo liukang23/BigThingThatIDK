@@ -107,8 +107,6 @@ public class GameActivity extends AppCompatActivity {
         });
         mHomeWatcher2.startWatch();
 
-        getActionBar().setDisplayHomeAsUpEnabled(true);
-
         playGame();
     }
 

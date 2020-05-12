@@ -5,12 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
+    android:id="@+id/mainlayout">
 
     <RelativeLayout
         android:layout_weight=".2"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:id="@+id/mainimagelayout">
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -23,7 +25,8 @@
     <RelativeLayout
         android:layout_weight=".1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:id="@+id/mainmiddlelayout">
         <Button
             android:id="@+id/StartButton"
             android:layout_width="wrap_content"
@@ -46,7 +49,8 @@
     <RelativeLayout
         android:layout_weight=".2"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:id="@+id/mainrightlayout">
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
